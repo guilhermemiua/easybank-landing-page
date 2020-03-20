@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border: 0;
+  /* border: 1px solid red; */
+}
+
+body {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 18px;
+}
+
+/* Components */
+
+.container {
+  max-width: 80vw;
+  margin: 0 auto;
+  display: flex;
+}
+
+.request-invite-button {
+  display: block;
+  font-size: 1rem;
+  padding: 15px 40px;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: 700;
+  background: linear-gradient(90deg, rgba(49,211,92,1) 0%, rgba(43,183,218,1) 100%);
+}
+
+/* Fonts */
+h1, h2, h3, button {
+  font-weight: 400;
+}
+
+h4, h5, p {
+  font-weight: 300;
+}
+
+/* Header */
+nav {
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+nav img {
+  padding: 10px 0px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  padding: 10px;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background-color: #fafafa;
+}
+
+.hero .container {
+  align-items: center;
+}
+.hero .hero-content {
+  flex: 1;
+}
+
+.hero .hero-content .hero-title {
+  color: #2d314d;
+  font-size: 3.5rem;
+  margin: 30px 0px;
+}
+
+.hero .hero-content .hero-text {
+  margin-right: 100px;
+}
+
+.hero .hero-content button {
+  margin-top: 30px;
+}
+
+.hero .hero-image {
+  flex: 1;
+}
+
+.hero .hero-image img {
+  width: 100%;
+}
