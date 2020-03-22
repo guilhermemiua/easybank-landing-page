@@ -15,8 +15,8 @@ body {
 /* Components */
 
 .container {
-  width: 90%;
-  max-width: 80vw;
+  width: 90vw;
+  max-width: 1080px;
   margin: 0 auto;
   display: flex;
 }
@@ -32,14 +32,13 @@ body {
 }
 
 /* Fonts */
-h1, h2, h3, button {
+h1, h2, h3, h4, button {
   color: #2d314d;
   font-weight: 400;
 }
 
-h4, h5, p {
-  font-weight: 300;
-  color: #9698a6;
+h2 {
+  font-size: 2.7rem;
 }
 
 h4 {
@@ -48,6 +47,8 @@ h4 {
 }
 
 p {
+  font-weight: 300;
+  color: #9698a6;
   font-size: 1rem;
   line-height: 1.6rem;
 }
@@ -72,37 +73,38 @@ nav ul li {
 }
 
 /* Hero */
-.hero {
-  height: 100vh;
+section.hero {
   background-color: #fafafa;
 }
 
-.hero .container {
+section.hero .container {
   align-items: center;
 }
 
-.hero .hero-content {
+section.hero .hero-content {
   flex: 1;
 }
 
-.hero .hero-content .hero-title {
+section.hero .hero-content .hero-title {
   font-size: 3.5rem;
   margin: 30px 0px;
 }
 
-.hero .hero-content .hero-text {
+section.hero .hero-content .hero-text {
   margin-right: 100px;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
 }
 
-.hero .hero-content button {
+section.hero .hero-content button {
   margin-top: 30px;
 }
 
-.hero .hero-image {
+section.hero .hero-image {
   flex: 1;
 }
 
-.hero .hero-image img {
+section.hero .hero-image img {
   width: 100%;
 }
 
@@ -121,8 +123,12 @@ main .main-header {
 }
 
 main .main-header .main-title {
-  font-size: 2.7rem;
   margin-bottom: 30px;
+}
+
+main .main-text {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
 }
 
 main .main-list {
@@ -137,4 +143,102 @@ main .main-list-item {
 main .main-list .main-list-item-title {
   font-size: 1.5rem;
   margin: 40px 0 20px 0;
+}
+
+/* Articles */
+section.articles {
+  padding: 100px 0;
+  background-color: #fafafa;
+}
+
+section.articles .articles-title {
+  margin-bottom: 60px;
+}
+
+section.articles .articles-container {
+  flex-direction: column;
+}
+
+section.articles .articles-list {
+  display: flex;
+}
+
+section.articles .article-item {
+  border-radius: 7px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+section.articles .article-first-item {
+  margin-left: 0px;
+}
+
+section.articles .article-item-image {
+  flex: 1;
+}
+
+section.articles .article-item-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 7px 7px 0 0;
+}
+
+section.articles .article-item-content {
+  padding: 20px;
+  flex: 1;
+}
+
+section.articles .article-item-author {
+  font-size: 0.8rem; 
+  font-weight: 300;
+  color: #9698a6;
+}
+
+section.articles .article-item-title {
+  margin: 10px 0;
+}
+
+/* Responsive */
+@media all and (max-width: 720px) {
+  .container {
+    flex-direction: column;
+  }
+
+  /* Nav */
+  nav {
+    justify-content: space-between;
+  }
+
+  nav ul, .request-invite-button {
+    display: none;
+  }
+
+  /* Hero */
+  section.hero {
+    text-align: center;
+  }
+
+  section.hero .hero-container {
+    flex-direction: column-reverse;
+  }
+
+  section.hero .hero-content .hero-text {
+    margin-right: 0;
+  }
+
+  /* Main */
+  main {
+    text-align: center;
+  }
+
+  main .main-list {
+    flex-direction: column;
+  }
+
+  /* Articles */
+  section.articles .articles-list {
+    flex-direction: column;
+  }
 }
